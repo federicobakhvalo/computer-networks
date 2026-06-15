@@ -52,11 +52,4 @@ class IPCalculatorApp:
         self.mask_var.set(res['mask'])
 
 
-def run_app():
-    root = tk.Tk()
-    app = IPCalculatorApp(root)
-    root.mainloop()
 
-
-if __name__ == '__main__':
-    run_app()

@@ -1,4 +1,4 @@
-from .gui import IPCalculatorApp
+from gui import IPCalculatorApp
 from tkinter import Tk
 
 

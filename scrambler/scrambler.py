@@ -2,7 +2,6 @@ class Scrambler:
     def __init__(self, taps: tuple):
         self.taps = taps
         self.memory = max(taps)
-
         self.state = [0] * self.memory
 
     def process_bit(self, bit: int):
@@ -32,7 +31,10 @@ class Scrambler:
 
 class Descrambler(Scrambler):
     def process_bit(self, bit: int):
-        # Дескремблирование - это просто обратный процесс
+
+        if bit not in (0, 1):
+            raise ValueError("Bit must be 0 or 1")
+
         feedback = 0
         for tap in self.taps:
             feedback ^= self.state[-tap]

@@ -25,6 +25,10 @@ class ScramblerApp:
 
 if __name__ == "__main__":
     app = ScramblerApp(taps=(3, 5))
-    original = "110101"
-    scrambled = app.scramble_string(original)
+    original = "1111111000111100100000101"
+    # scrambled = app.scramble_string(original)
     descrambled = app.descramble_string(scrambled)
+    # как мне проверить правильность Scrambler и Descrembler
+    print(f"Original:   {original}")
+    print(f"Scrambled:  {scrambled}")
+    print(f"Descrambled: {descrambled}")
